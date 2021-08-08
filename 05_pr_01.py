@@ -1,19 +1,10 @@
-# WAP to find greatest of four numbers entered by the user
+# WAP to read the text from a given file poems.txt and  find out whether it combines the word twinkle 
+f = open('poem.txt')
+t = f.read()
+if 'Twinkle' in t:
+    print("Twinkle is present ")
+else:
+    print("Twinkle is not present")
 
-n1 = int(input("Enter the number 1\n"))
-n2 = int(input("Enter the number 2\n"))
-n3 = int(input("Enter the number 3\n"))
-n4 = int(input("Enter the number 4 \n"))
+f.close()
 
-if(n1>n4):
-   f1 = n1
-else:
-    f1 = n4
-if(n2>n3):
-   f2 = n2
-else:
-    f2 = n3
-if(f1>f2):
-    print(str(f1) + "is greatest")
-else:
-    print(str(f2) + "is greatest")

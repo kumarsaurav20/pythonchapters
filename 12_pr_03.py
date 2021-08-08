@@ -1,11 +1,18 @@
-# WAP to find whether a given number is prime or not:::
-p = int(input("Enter the number\n"))
-prime = True
-for i in range(2 ,p):
-    if(p%i == 0):
-        prime = False
-        break
-if prime:
-    print("This number is Prime")
-else :
-    print("This number is not prime")
+# Create a class Employee and add salary and increment properties to it.
+# Write a method salary after increment method with a @property decorator with a setter
+# which changes the value 0f  increament based on the salary 
+
+class Employee:
+    salary = 1000
+    increment = 1.5
+    @property
+    def salaryafterincrement(self):
+        return self.salary *self.increment
+
+    @salaryafterincrement.setter
+    def salaryafterincrement(self,sai):
+        self.increment = sai/self.salary
+        
+e = Employee()
+print(e.salaryafterincrement)
+        
